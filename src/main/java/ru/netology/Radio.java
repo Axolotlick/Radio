@@ -41,15 +41,17 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation == maxStation) {
-            this.currentStation = minStation;
+            if (currentStation == maxStation) {
+                this.currentStation = minStation;
+                return;
+            }
+            currentStation = currentStation + 1;
         }
-        currentStation = currentStation + 1;
-    }
 
     public void prevStation() {
         if (currentStation == minStation) {
             this.currentStation = maxStation;
+            return;
         }
         this.currentStation = currentStation - 1;
     }
